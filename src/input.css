@@ -1,0 +1,192 @@
+/* Custom Fonts */
+@font-face {
+  font-family: "DM Mono";
+  src: url("../fonts/DMMono-Regular.woff2") format("woff2"),
+    url("../fonts/DMMono-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Bold.woff2") format("woff2"),
+    url("../fonts/Roboto-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Trebuchet";
+  src: url("../fonts/Trebuchet-Bold.woff2") format("woff2"),
+    url("../fonts/Trebuchet-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Trebuchet";
+  src: url("../fonts/Trebuchet-Regular.woff2") format("woff2"),
+    url("../fonts/Trebuchet-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+/* Custom Fonts */
+
+/* Tailwind CSS */
+@import "tailwindcss";
+
+@theme {
+  --font-dmMono: "DM Mono", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+  --font-trebuchet: "Trebuchet", sans-serif;
+
+  --color-custom-black: #000000;
+  --color-custom-white: #f9f9f9;
+  --color-custom-blue-dark: #142444;
+  --color-custom-blue-light: #0c94d4;
+  --color-custom-gray-dark: #2c2c2c;
+  --color-custom-gray-light: #e3e3e3;
+
+  --text-font-12: 12px;
+  --text-font-12--line-height: 1.5;
+
+  --text-font-14: 14px;
+  --text-font-14--line-height: 1.5;
+
+  --text-font-16: 16px;
+  --text-font-16--line-height: 1.5;
+
+  --text-font-18: 18px;
+  --text-font-18--line-height: 1.5;
+
+  --text-font-20: 20px;
+  --text-font-20--line-height: 1.2;
+
+  --text-font-24: 24px;
+  --text-font-24--line-height: 1.2;
+
+  --text-font-40: 40px;
+  --text-font-40--line-height: 1.2;
+
+  --text-font-48: 48px;
+  --text-font-48--line-height: 1.2;
+}
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply font-dmMono bg-custom-white text-custom-gray-dark font-normal text-font-16;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-trebuchet text-custom-blue-dark font-bold;
+  }
+
+  a {
+    @apply inline-block align-middle font-trebuchet font-bold;
+  }
+
+  img {
+    @apply w-full h-full object-contain;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+
+  input {
+    @apply w-full;
+  }
+}
+
+@layer components {
+  .wrapper {
+    @apply w-full max-w-[1312px] mx-auto px-4 md:px-12 xl:px-0;
+  }
+
+  .custom-btn {
+    @apply text-font-16 leading-none font-bold capitalize py-2 px-6 bg-custom-blue-light/30 text-custom-white w-fit h-12 flex items-center justify-center gap-2 rounded-md border border-custom-blue-light transition-all duration-200 ease-in-out hover:bg-custom-blue-light;
+  }
+
+  .custom-btn--outline {
+    @apply bg-transparent border-custom-white hover:border-custom-blue-light;
+  }
+
+  .custom-btn--outline-black {
+    @apply border-custom-blue-dark text-custom-blue-dark hover:text-custom-white;
+  }
+
+  .custom-btn--light {
+    @apply text-custom-blue-dark hover:text-custom-white;
+  }
+
+  .custom-btn--md {
+    @apply px-3 h-10;
+  }
+
+  .nav__link {
+    @apply text-custom-white hover:text-custom-blue-light transition-all duration-200 ease-in-out;
+  }
+
+  .default-card {
+    @apply bg-custom-white p-10 border border-custom-gray-light rounded-lg;
+  }
+
+  .footer-nav-link {
+    @apply my-2 text-custom-white hover:underline text-font-18 font-bold font-trebuchet;
+  }
+
+  .footer-nav-link-text {
+    @apply hover:no-underline;
+  }
+
+  .footer-nav-sub-link {
+    @apply my-1 font-normal font-dmMono text-custom-white;
+  }
+}
+
+/* Custom CSS */
+.card-description--overflow {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.trusted-bg {
+  position: relative;
+  background-image: url("../images/trusted-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.trusted-bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 36, 68, 0.4);
+  z-index: 1;
+}
+
+/* Custom CSS */
