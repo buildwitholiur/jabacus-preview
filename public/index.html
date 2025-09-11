@@ -24,14 +24,27 @@
 
   <body>
     <!-- Header Area -->
-    <header class="py-8 absolute top-0 left-0 w-full z-50">
+    <header class="py-8 absolute top-0 left-0 w-full z-50 header">
       <div class="wrapper">
-        <nav class="flex items-center justify-between">
+        <nav
+          class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 lg:gap-0 relative"
+        >
           <a href="#" class="w-fit h-[61px]">
-            <img src="images/logo.png" alt="logo" />
+            <img class="logo-light" src="images/logo.png" alt="logo" />
+            <img class="logo-dark" src="images/logo-dark.png" alt="logo" />
           </a>
 
-          <ul class="flex items-center gap-8">
+          <!-- Hamburger Icon -->
+          <button class="navbar__toggler lg:hidden">
+            <span class="bar1 toggle-bar"></span>
+            <span class="bar2 toggle-bar"></span>
+            <span class="bar3 toggle-bar"></span>
+          </button>
+          <!-- Hamburger Icon -->
+
+          <ul
+            class="nav-list hidden lg:flex flex-col lg:flex-row lg:items-center gap-8"
+          >
             <li>
               <a href="#" class="nav__link">Calculators</a>
             </li>
@@ -42,10 +55,15 @@
               <a href="#" class="nav__link">Contact</a>
             </li>
             <li>
-              <a href="#" class="custom-btn custom-btn--md">
+              <a href="#" class="custom-btn custom-btn--md custom-btn--nav">
                 <img
-                  class="w-5"
+                  class="w-5 logo-light"
                   src="images/account-circle.svg"
+                  alt="account circle"
+                />
+                <img
+                  class="w-5 logo-dark"
+                  src="images/account-circle-light.svg"
                   alt="account circle"
                 />
                 Log In
@@ -63,12 +81,16 @@
       <section class="pt-[157px] pb-16 bg-custom-blue-dark">
         <div class="wrapper">
           <div class="">
-            <div class="flex items-start justify-between">
-              <h1 class="text-font-48 text-custom-white w-full max-w-[560px]">
+            <div
+              class="flex flex-col xl:flex-row gap-8 xl:gap-0 xl:items-start xl:justify-between"
+            >
+              <h1
+                class="text-font-36 md:text-font-40 md:text-font-48 text-custom-white w-full xl:max-w-[560px]"
+              >
                 Online construction calculators, trusted by engineers
               </h1>
 
-              <div class="w-full max-w-[560px] space-y-5.5">
+              <div class="w-full xl:max-w-[560px] space-y-5.5">
                 <p class="text-font-18 text-custom-gray-light">
                   From seismic and wind loads to concrete and critical
                   connections, jabacus replaces spreadsheets with precise,
@@ -81,10 +103,12 @@
               </div>
             </div>
 
-            <div class="flex items-center gap-4 mt-10">
-              <a href="#" class="custom-btn normal-case">Try for Free</a>
+            <div class="flex flex-col md:flex-row md:items-center gap-4 mt-10">
+              <a href="#" class="custom-btn normal-case w-full md:w-fit"
+                >Try for Free</a
+              >
 
-              <a href="#" class="custom-btn custom-btn--outline"
+              <a href="#" class="custom-btn custom-btn--outline w-full md:w-fit"
                 >See All Calculators</a
               >
             </div>
@@ -94,7 +118,9 @@
       <!-- Hero Area -->
 
       <!-- Spreadsheets Code -->
-      <section class="pt-[191px] pb-[177px] relative overflow-hidden">
+      <section
+        class="py-20 md:py-30 xl:pt-[191px] xl:pb-[177px] relative overflow-hidden"
+      >
         <img
           class="w-[1398px] h-[1822px] absolute -bottom-[300px] left-1/2 -translate-x-1/2 rotate-[30deg] z-10"
           src="images/gradient-lg.png"
@@ -108,9 +134,11 @@
         />
 
         <div class="wrapper relative z-20">
-          <div class="flex items-start gap-[139px]">
+          <div
+            class="flex flex-col xl:flex-row xl:items-start gap-16 xl:gap-[139px]"
+          >
             <div class="flex-1">
-              <h2 class="text-font-40">
+              <h2 class="text-font-36 md:text-font-40">
                 Your spreadsheets wouldn't stand up to code
               </h2>
 
@@ -193,10 +221,10 @@
 
       <!-- Jabacus Saves -->
       <section
-        class="w-full h-auto aspect-[1440/704] relative overflow-hidden mb-[184px]"
+        class="w-full h-[600px] lg:h-auto lg:aspect-[1440/704] relative overflow-hidden mb-30 xl:mb-[184px]"
       >
         <img
-          class="object-contain"
+          class="object-cover lg:object-contain"
           src="images/grid-boxes.svg"
           alt="grid boxes"
         />
@@ -208,10 +236,10 @@
         />
 
         <div
-          class="py-11.5 w-full max-w-[889px] bg-custom-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30"
+          class="py-11.5 px-5 md:px-0 w-full max-w-[calc(100%-32px)] md:max-w-[calc(100%-96px)] xl:max-w-[889px] bg-custom-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30"
         >
           <div class="max-w-[625px] w-full text-center mx-auto space-y-6">
-            <h2 class="text-font-40">
+            <h2 class="text-font-36 md:text-font-40">
               jabacus saves you from the spreadsheets
             </h2>
 
@@ -227,32 +255,38 @@
       <!-- Jabacus Saves -->
 
       <!-- Why Structural Engineers -->
-      <section class="pt-[184px] pb-[222px] bg-custom-blue-dark">
+      <section
+        class="py-20 md:py-30 xl:pt-[184px] xl:pb-[222px] bg-custom-blue-dark"
+      >
         <div class="wrapper">
           <div
-            class="flex items-start justify-center gap-[159px] pl-[87px] pr-[111px]"
+            class="flex flex-col xl:flex-row xl:items-start xl:justify-center gap-16 xl:gap-[159px] xl:pl-[87px] xl:pr-[111px]"
           >
-            <div class="w-full max-w-[533px]">
-              <h2 class="text-custom-white text-font-40">
+            <div class="w-full xl:max-w-[533px]">
+              <h2 class="text-custom-white text-font-36 md:text-font-40">
                 Why structural engineers rely on jabacus
               </h2>
 
-              <div class="flex items-center gap-4 mt-10">
-                <a href="#" class="custom-btn">See Pricing</a>
+              <div
+                class="flex flex-col md:flex-row md:items-center gap-4 mt-10"
+              >
+                <a href="#" class="custom-btn w-full md:w-fit">See Pricing</a>
 
-                <a href="#" class="custom-btn custom-btn--outline"
+                <a
+                  href="#"
+                  class="custom-btn custom-btn--outline w-full md:w-fit"
                   >See All Calculators</a
                 >
               </div>
 
               <img
-                class="w-fit h-[419px] ml-6.5 mt-28"
+                class="w-fit h-[270px] md:h-[350px] xl:h-[419px] xl:ml-6.5 mt-12 xl:mt-28 mx-auto xl:mx-0"
                 src="images/structural.png"
                 alt="structural"
               />
             </div>
 
-            <div class="w-full max-w-[422px] space-y-6">
+            <div class="w-full xl:max-w-[422px] space-y-6">
               <div
                 class="space-y-6 border-b border-custom-gray-light py-4 first-of-type:pt-0"
               >
@@ -339,7 +373,9 @@
       <!-- Why Structural Engineers -->
 
       <!-- Critical Calculations -->
-      <section class="pt-[184px] pb-[200px] relative overflow-hidden">
+      <section
+        class="py-20 md:py-30 xl:pt-[184px] xl:pb-[200px] relative overflow-hidden"
+      >
         <img
           class="w-[1398px] h-[1822px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-[30deg] z-10"
           src="images/gradient-lg.png"
@@ -348,11 +384,13 @@
 
         <div class="wrapper relative z-20">
           <div class="space-y-6">
-            <div class="flex gap-6">
+            <div class="flex flex-col lg:flex-row gap-6">
               <div
-                class="w-full max-w-[533px] bg-custom-blue-light p-8 flex items-center rounded-lg"
+                class="w-full lg:max-w-[400px] xl:max-w-[533px] bg-custom-blue-light px-6 py-8 md:p-8 flex items-center rounded-lg min-h-[334px] lg:min-h-auto"
               >
-                <h2 class="text-font-40 text-custom-white">
+                <h2
+                  class="text-font-36 xl:text-font-36 md:text-font-40 text-custom-white"
+                >
                   Consider the critical calculations handled
                 </h2>
               </div>
@@ -386,7 +424,7 @@
               </div>
             </div>
 
-            <div class="flex gap-6">
+            <div class="flex flex-col lg:flex-row gap-6">
               <div class="flex-1 default-card space-y-6">
                 <img
                   class="w-fit h-14"
@@ -449,11 +487,13 @@
       <!-- Critical Calculations -->
 
       <!-- Trusted Area -->
-      <section class="trusted-bg h-[643px] py-[107px]">
+      <section class="trusted-bg min-h-[643px] py-20 md:py-30 xl:py-[107px]">
         <div class="wrapper relative z-50">
-          <div class="flex items-start gap-[153px]">
-            <div class="w-full max-w-[560px]">
-              <h2 class="text-custom-white text-font-40">
+          <div
+            class="flex flex-col xl:flex-row xl:items-start gap-12 md:gap-20 xl:gap-[153px] max-w-[1201px]"
+          >
+            <div class="flex-1">
+              <h2 class="text-custom-white text-font-36 md:text-font-40">
                 Built by engineers,
                 <span class="block">trusted by thousands</span>
               </h2>
@@ -463,9 +503,107 @@
               </p>
             </div>
 
-            <div class="flex-1">
-              <div class="">
-                <h3 class="text-custom-white">sdjfsdkfjsdkj</h3>
+            <div class="w-full lg:max-w-[488px]">
+              <div class="swiper swiper--trust">
+                <div class="swiper-wrapper">
+                  <!-- Single Slide -->
+                  <div class="swiper-slide">
+                    <div class="bg-custom-white py-4 px-6 rounded-lg">
+                      <p class="text-font-18">
+                        "The precision and ease of use are unmatched!"
+                      </p>
+
+                      <div class="mt-8">
+                        <img
+                          class="w-14 h-14 rounded-full object-cover"
+                          src="images/avatar.png"
+                          alt="avatar"
+                        />
+
+                        <h2 class="mt-4 text-font-20 text-custom-gray-dark">
+                          Aaron Johnson
+                        </h2>
+
+                        <p class="text-font-14">Senior Engineer, ABC Corp</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Single Slide -->
+
+                  <!-- Single Slide -->
+                  <div class="swiper-slide">
+                    <div class="bg-custom-white py-4 px-6 rounded-lg">
+                      <p class="text-font-18">
+                        "The precision and ease of use are unmatched!"
+                      </p>
+
+                      <div class="mt-8">
+                        <img
+                          class="w-14 h-14 rounded-full object-cover"
+                          src="images/avatar.png"
+                          alt="avatar"
+                        />
+
+                        <h2 class="mt-4 text-font-20 text-custom-gray-dark">
+                          Aaron Johnson
+                        </h2>
+
+                        <p class="text-font-14">Senior Engineer, ABC Corp</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Single Slide -->
+
+                  <!-- Single Slide -->
+                  <div class="swiper-slide">
+                    <div class="bg-custom-white py-4 px-6 rounded-lg">
+                      <p class="text-font-18">
+                        "The precision and ease of use are unmatched!"
+                      </p>
+
+                      <div class="mt-8">
+                        <img
+                          class="w-14 h-14 rounded-full object-cover"
+                          src="images/avatar.png"
+                          alt="avatar"
+                        />
+
+                        <h2 class="mt-4 text-font-20 text-custom-gray-dark">
+                          Aaron Johnson
+                        </h2>
+
+                        <p class="text-font-14">Senior Engineer, ABC Corp</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Single Slide -->
+                </div>
+              </div>
+
+              <div
+                class="flex flex-col md:flex-row items-center md:justify-between gap-10 md:gap-0 mt-16"
+              >
+                <div class="swiper-pagination swiper-pagination--trust"></div>
+
+                <div class="flex items-center gap-4">
+                  <div
+                    class="swiper-button-prev swiper-button-prev--trust slider-arrow"
+                  >
+                    <img
+                      src="images/slider-arrow-left.svg"
+                      alt="slider arrow"
+                    />
+                  </div>
+
+                  <div
+                    class="swiper-button-next swiper-button-next--trust slider-arrow"
+                  >
+                    <img
+                      src="images/slider-arrow-right.svg"
+                      alt="slider arrow"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -474,22 +612,26 @@
       <!-- Trusted Area -->
 
       <!-- Saving Hours -->
-      <section class="pt-[184px] pb-[222px]">
+      <section class="py-20 md:py-30 xl:pt-[184px] xl:pb-[222px]">
         <div class="wrapper">
-          <div class="flex items-start gap-[160px] max-w-[1202px]">
-            <div class="w-fit max-w-[508px]">
-              <h2 class="text-font-40">
+          <div
+            class="flex flex-col xl:flex-row xl:items-start gap-20 xl:gap-[160px] max-w-[1202px]"
+          >
+            <div class="w-fit xl:max-w-[508px]">
+              <h2 class="text-font-36 md:text-font-40">
                 We're saving Canadian engineers hours of work
               </h2>
 
-              <div class="flex items-center gap-4 mt-10">
-                <a href="#" class="custom-btn custom-btn--light"
+              <div
+                class="flex flex-col md:flex-row md:items-center gap-4 mt-10"
+              >
+                <a href="#" class="custom-btn custom-btn--light w-full md:w-fit"
                   >Try for Free</a
                 >
 
                 <a
                   href="#"
-                  class="custom-btn custom-btn--outline custom-btn--outline-black"
+                  class="custom-btn custom-btn--outline custom-btn--outline-black w-full md:w-fit"
                   >See All Calculators</a
                 >
               </div>
@@ -497,15 +639,15 @@
 
             <div class="flex-1 space-y-14">
               <div
-                class="border-b border-custom-gray-light pb-6 flex items-start gap-12"
+                class="border-b border-custom-gray-light pb-6 flex items-start gap-6 md:gap-12"
               >
                 <h4
-                  class="text-font-24 font-dmMono font-normal text-custom-blue-light border border-custom-blue-light w-16 h-16 rounded-full flex items-center justify-center"
+                  class="text-font-24 font-dmMono font-normal text-custom-blue-light border border-custom-blue-light w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center"
                 >
                   1
                 </h4>
 
-                <div class="space-y-6 flex-1">
+                <div class="space-y-4 md:space-y-6 flex-1">
                   <h3 class="text-font-24">Log in from anywhere</h3>
 
                   <p class="font-trebuchet leading-tight">
@@ -516,15 +658,15 @@
               </div>
 
               <div
-                class="border-b border-custom-gray-light pb-6 flex items-start gap-12"
+                class="border-b border-custom-gray-light pb-6 flex items-start gap-6 md:gap-12"
               >
                 <h4
-                  class="text-font-24 font-dmMono font-normal text-custom-blue-light border border-custom-blue-light w-16 h-16 rounded-full flex items-center justify-center"
+                  class="text-font-24 font-dmMono font-normal text-custom-blue-light border border-custom-blue-light w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center"
                 >
                   1
                 </h4>
 
-                <div class="space-y-6 flex-1">
+                <div class="space-y-4 md:space-y-6 flex-1">
                   <h3 class="text-font-24">Log in from anywhere</h3>
 
                   <p class="font-trebuchet leading-tight">
@@ -535,15 +677,15 @@
               </div>
 
               <div
-                class="border-b border-custom-gray-light pb-6 flex items-start gap-12"
+                class="border-b border-custom-gray-light pb-6 flex items-start gap-6 md:gap-12"
               >
                 <h4
-                  class="text-font-24 font-dmMono font-normal text-custom-blue-light border border-custom-blue-light w-16 h-16 rounded-full flex items-center justify-center"
+                  class="text-font-24 font-dmMono font-normal text-custom-blue-light border border-custom-blue-light w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center"
                 >
                   1
                 </h4>
 
-                <div class="space-y-6 flex-1">
+                <div class="space-y-4 md:space-y-6 flex-1">
                   <h3 class="text-font-24">Log in from anywhere</h3>
 
                   <p class="font-trebuchet leading-tight">
@@ -562,9 +704,11 @@
       <section class="">
         <div class="wrapper">
           <div
-            class="bg-custom-blue-dark p-20 pt-[112px] flex items-start gap-7 rounded-tl-lg rounded-tr-lg"
+            class="bg-custom-blue-dark px-6 py-12 md:p-12 lg:p-20 lg:pt-[112px] flex flex-col xl:flex-row xl:items-start gap-7 rounded-tl-lg rounded-tr-lg"
           >
-            <h2 class="text-custom-white text-font-40 w-full max-w-[560px]">
+            <h2
+              class="text-custom-white text-font-36 md:text-font-40 w-full max-w-[560px]"
+            >
               Faster calculations, <span class="block">fewer errors</span>
             </h2>
 
@@ -574,10 +718,12 @@
                 smarter with jabacus.
               </p>
 
-              <div class="flex items-center gap-4">
-                <a href="#" class="custom-btn">Sign Up</a>
+              <div class="flex flex-col md:flex-row md:items-center gap-4">
+                <a href="#" class="custom-btn w-full md:w-fit">Sign Up</a>
 
-                <a href="#" class="custom-btn custom-btn--outline"
+                <a
+                  href="#"
+                  class="custom-btn custom-btn--outline w-full md:w-fit"
                   >See All Calculators</a
                 >
               </div>
@@ -585,7 +731,7 @@
           </div>
 
           <img
-            class="h-[326px] object-cover rounded-bl-lg rounded-br-lg"
+            class="h-[326px] object-right object-cover rounded-bl-lg rounded-br-lg"
             src="images/faster-calculations.jpg"
             alt="faster-calculations"
           />
@@ -594,7 +740,7 @@
       <!-- Faster Calculations -->
 
       <!-- Resources Area -->
-      <section class="py-[184px] relative overflow-hidden">
+      <section class="py-20 md:py-30 xl:py-[184px] relative overflow-hidden">
         <img
           class="w-[1398px] h-[1822px] absolute -bottom-[345px] left-1/2 -translate-x-1/2 rotate-[30deg] z-10"
           src="images/gradient-lg.png"
@@ -602,9 +748,13 @@
         />
 
         <div class="wrapper relative z-20">
-          <div class="flex items-center justify-between">
+          <div
+            class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 lg:gap-0"
+          >
             <div class="space-y-6">
-              <h2 class="text-font-40">Resources for structural engineers</h2>
+              <h2 class="text-font-36 md:text-font-40">
+                Resources for structural engineers
+              </h2>
 
               <p class="text-custom-blue-dark">
                 The latest updates and go-to resources that help engineers work
@@ -615,7 +765,9 @@
             <a href="#" class="custom-btn custom-btn--light">View All</a>
           </div>
 
-          <div class="grid grid-cols-3 gap-6 mt-16">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-6 mt-12 md:mt-16 max-w-[450px] lg:max-w-full mx-auto"
+          >
             <!-- Single Card -->
             <div class="">
               <a
@@ -742,7 +894,7 @@
     <!-- Footer Area -->
     <footer class="bg-custom-blue-dark py-20 rounded-tl-lg rounded-tr-lg">
       <div class="wrapper">
-        <div class="flex items-start gap-10 pb-20">
+        <div class="flex flex-col lg:flex-row lg:items-start gap-10 pb-20">
           <div class="flex-1">
             <a href="#" class="w-fit h-[33px]">
               <img src="images/logo-footer.png" alt="logo" />
@@ -823,8 +975,13 @@
               </li>
             </ul>
 
-            <div class="flex items-center gap-4 mt-4">
-              <a href="#" class="custom-btn custom-btn--md">
+            <div
+              class="flex flex-row lg:flex-col xl:flex-row xl:items-center gap-4 mt-4"
+            >
+              <a
+                href="#"
+                class="custom-btn custom-btn--md w-fit lg:w-full xl:w-fit"
+              >
                 <img
                   class="w-5"
                   src="images/account-circle.svg"
@@ -833,7 +990,10 @@
                 Log In
               </a>
 
-              <a href="#" class="custom-btn custom-btn--md">
+              <a
+                href="#"
+                class="custom-btn custom-btn--md w-fit lg:w-full xl:w-fit"
+              >
                 <img
                   class="w-5"
                   src="images/register-user.svg"
@@ -859,8 +1019,12 @@
         </div>
 
         <div class="border-t border-t-custom-blue-light pt-8">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center gap-6">
+          <div
+            class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 lg:gap-0"
+          >
+            <div
+              class="flex flex-col md:flex-row md:items-center gap-2 md:gap-6"
+            >
               <p class="text-custom-white text-font-14">
                 © 2009–2025 Modulo Software Inc. (DBA jabacus)
               </p>
