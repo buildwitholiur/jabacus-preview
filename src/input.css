@@ -48,6 +48,7 @@
   --color-custom-white: #f9f9f9;
   --color-custom-blue-dark: #142444;
   --color-custom-blue-light: #0c94d4;
+  --color-custom-gray: #9c9990;
   --color-custom-gray-dark: #2c2c2c;
   --color-custom-gray-light: #e3e3e3;
 
@@ -124,7 +125,7 @@
   }
 
   .custom-btn {
-    @apply text-font-16 leading-none font-bold capitalize py-2 px-6 bg-custom-blue-light/30 text-custom-white w-fit h-12 flex items-center justify-center gap-2 rounded-md border border-custom-blue-light transition-all duration-200 ease-in-out hover:bg-custom-blue-light;
+    @apply font-trebuchet text-font-16 leading-none font-bold capitalize py-2 px-6 bg-custom-blue-light/30 text-custom-white w-fit h-12 flex items-center justify-center gap-2 rounded-md border border-custom-blue-light transition-all duration-200 ease-in-out hover:bg-custom-blue-light;
   }
 
   .custom-btn--outline {
@@ -137,6 +138,10 @@
 
   .custom-btn--light {
     @apply text-custom-blue-dark hover:text-custom-white;
+  }
+
+  .custom-btn--lg {
+    @apply px-3 h-10.5 text-font-18;
   }
 
   .custom-btn--md {
@@ -165,6 +170,42 @@
 
   .footer-nav-sub-link {
     @apply my-1 font-normal font-dmMono text-custom-white;
+  }
+
+  .label-block {
+    @apply block;
+  }
+
+  .label-style {
+    @apply block text-font-18 font-normal font-dmMono mb-2;
+  }
+
+  .input-style {
+    @apply w-full h-10.5 rounded-lg bg-custom-white border border-custom-gray py-2 px-5 outline-none text-font-18 block;
+  }
+
+  .input-style--textarea {
+    @apply resize-none h-[126px];
+  }
+
+  .form-checkbox-label {
+    @apply text-font-12 text-custom-gray-dark font-dmMono font-normal;
+  }
+
+  .form-checkbox-input {
+    @apply hidden;
+  }
+
+  .form-checkbox-content {
+    @apply flex items-center gap-2.5 cursor-pointer;
+  }
+
+  .form-checkbox-icon {
+    @apply w-3 h-3 border-[1.5px] border-custom-gray-dark flex items-center justify-center rounded-[2px];
+  }
+
+  .form-checkbox-tick {
+    @apply w-2.5 h-auto object-contain hidden;
   }
 }
 
@@ -327,6 +368,34 @@
 
 .header--show .toggle-bar {
   background: #142444;
+}
+
+.header--dark .logo-dark {
+  display: block;
+}
+
+.header--dark .logo-light {
+  display: none;
+}
+
+.header--dark .nav__link {
+  color: #142444;
+}
+
+.header--dark .custom-btn--nav {
+  color: #142444;
+}
+
+.header--dark .custom-btn--nav:hover {
+  color: #f9f9f9;
+}
+
+.header--dark .toggle-bar {
+  background: #142444;
+}
+
+.form-checkbox-input:checked + .form-checkbox-content .form-checkbox-icon img {
+  display: block;
 }
 
 /* Custom CSS */
