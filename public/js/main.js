@@ -27,3 +27,22 @@ document.querySelectorAll(".navbar__toggler").forEach((toggler) => {
     document.body.classList.toggle("overflow-hidden");
   });
 });
+
+// Password Eye Toggle
+const passwordEyetToggles = document.querySelectorAll(".toggle-eye-btn");
+
+passwordEyetToggles.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const passwordWrapper = btn.closest(".relative");
+    const passwordInput = passwordWrapper.querySelector(".password-input");
+
+    const isPassword = passwordInput.type === "password";
+    passwordInput.type = isPassword ? "text" : "password";
+
+    if (isPassword) {
+      btn.classList.add("toggle-eye-btn--show");
+    } else {
+      btn.classList.remove("toggle-eye-btn--show");
+    }
+  });
+});

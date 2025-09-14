@@ -29,7 +29,7 @@
         <nav
           class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 lg:gap-0 relative"
         >
-          <a href="#" class="w-fit h-[61px]">
+          <a href="#" class="w-fit h-13 md:h-[61px]">
             <img class="logo-light" src="images/logo.png" alt="logo" />
             <img class="logo-dark" src="images/logo-dark.png" alt="logo" />
           </a>
@@ -62,16 +62,18 @@
             </li>
             <li>
               <a href="#" class="custom-btn custom-btn--md custom-btn--nav">
-                <img
-                  class="w-5 logo-light"
-                  src="images/account-circle.svg"
-                  alt="account circle"
-                />
-                <img
-                  class="w-5 logo-dark"
-                  src="images/account-circle-light.svg"
-                  alt="account circle"
-                />
+                <svg
+                  width="20"
+                  height="21"
+                  viewBox="0 0 20 21"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3.85 15.6C4.7 14.95 5.65 14.4375 6.7 14.0625C7.75 13.6875 8.85 13.5 10 13.5C11.15 13.5 12.25 13.6875 13.3 14.0625C14.35 14.4375 15.3 14.95 16.15 15.6C16.7333 14.9167 17.1875 14.1417 17.5125 13.275C17.8375 12.4083 18 11.4833 18 10.5C18 8.28333 17.2208 6.39583 15.6625 4.8375C14.1042 3.27917 12.2167 2.5 10 2.5C7.78333 2.5 5.89583 3.27917 4.3375 4.8375C2.77917 6.39583 2 8.28333 2 10.5C2 11.4833 2.1625 12.4083 2.4875 13.275C2.8125 14.1417 3.26667 14.9167 3.85 15.6ZM10 11.5C9.01667 11.5 8.1875 11.1625 7.5125 10.4875C6.8375 9.8125 6.5 8.98333 6.5 8C6.5 7.01667 6.8375 6.1875 7.5125 5.5125C8.1875 4.8375 9.01667 4.5 10 4.5C10.9833 4.5 11.8125 4.8375 12.4875 5.5125C13.1625 6.1875 13.5 7.01667 13.5 8C13.5 8.98333 13.1625 9.8125 12.4875 10.4875C11.8125 11.1625 10.9833 11.5 10 11.5ZM10 20.5C8.61667 20.5 7.31667 20.2375 6.1 19.7125C4.88333 19.1875 3.825 18.475 2.925 17.575C2.025 16.675 1.3125 15.6167 0.7875 14.4C0.2625 13.1833 0 11.8833 0 10.5C0 9.11667 0.2625 7.81667 0.7875 6.6C1.3125 5.38333 2.025 4.325 2.925 3.425C3.825 2.525 4.88333 1.8125 6.1 1.2875C7.31667 0.7625 8.61667 0.5 10 0.5C11.3833 0.5 12.6833 0.7625 13.9 1.2875C15.1167 1.8125 16.175 2.525 17.075 3.425C17.975 4.325 18.6875 5.38333 19.2125 6.6C19.7375 7.81667 20 9.11667 20 10.5C20 11.8833 19.7375 13.1833 19.2125 14.4C18.6875 15.6167 17.975 16.675 17.075 17.575C16.175 18.475 15.1167 19.1875 13.9 19.7125C12.6833 20.2375 11.3833 20.5 10 20.5Z"
+                    fill="#F9F9F9"
+                  />
+                </svg>
                 Log In
               </a>
             </li>
@@ -85,7 +87,7 @@
     <main>
       <!-- Contact Area -->
       <section
-        class="py-20 md:py-30 xl:pt-[197px] xl:pb-[184px] relative overflow-hidden min-h-[900px]"
+        class="pt-36 pb-20 md:py-40 xl:pt-[197px] xl:pb-[184px] relative overflow-hidden min-h-[900px]"
       >
         <img
           class="w-[1078px] h-[1404px] absolute -bottom-[170px] left-1/2 -translate-x-1/2 rotate-[30deg] z-10"
@@ -95,10 +97,12 @@
 
         <div class="wrapper relative z-20">
           <div
-            class="flex flex-col xl:flex-row xl:items-start gap-16 xl:gap-[139px]"
+            class="flex flex-col xl:flex-row xl:items-start gap-10 md:gap-16 xl:gap-[139px]"
           >
             <div class="flex-1">
-              <h2 class="text-font-40 md:text-font-48">Let’s connect</h2>
+              <h2 class="text-font-36 md:text-font-40 xl:text-font-48">
+                Let’s connect
+              </h2>
 
               <p class="text-font-18 mt-6">
                 Have questions or need support? Our team is here to help you
@@ -107,37 +111,62 @@
               </p>
             </div>
 
-            <div class="w-full max-w-[533px]">
+            <div class="w-full lg:max-w-[533px]">
               <form action="">
                 <div class="space-y-4">
-                  <div class="flex gap-4">
-                    <label class="label-block">
-                      <span class="label-style">Your Name</span>
-                      <input type="text" name="" id="" class="input-style" />
+                  <div class="flex flex-col md:flex-row gap-4">
+                    <label class="label-block flex-1">
+                      <span class="label-style">First Name*</span>
+                      <input
+                        type="text"
+                        name="fname"
+                        id="fname"
+                        required
+                        class="input-style"
+                      />
                     </label>
 
-                    <label class="label-block">
-                      <span class="label-style">Your Name</span>
-                      <input type="text" name="" id="" class="input-style" />
+                    <label class="label-block flex-1">
+                      <span class="label-style">Last Name*</span>
+                      <input
+                        type="text"
+                        name="lname"
+                        id="lname"
+                        required
+                        class="input-style"
+                      />
                     </label>
                   </div>
 
                   <label class="label-block">
-                    <span class="label-style">Your Name</span>
-                    <input type="text" name="" id="" class="input-style" />
+                    <span class="label-style">Email Address*</span>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      required
+                      class="input-style"
+                    />
                   </label>
 
                   <label class="label-block">
-                    <span class="label-style">Your Name</span>
-                    <input type="text" name="" id="" class="input-style" />
+                    <span class="label-style">Subject*</span>
+                    <input
+                      type="text"
+                      name="subject"
+                      id="subject"
+                      required
+                      class="input-style"
+                    />
                   </label>
 
                   <label class="label-block">
-                    <span class="label-style">Your Name</span>
+                    <span class="label-style">Your Message*</span>
 
                     <textarea
-                      name=""
-                      id=""
+                      name="message"
+                      id="message"
+                      required
                       class="input-style input-style--textarea"
                     ></textarea>
                   </label>
@@ -146,8 +175,8 @@
                 <label class="flex items-center mt-2">
                   <input
                     type="checkbox"
-                    name="contact-method"
-                    value="email"
+                    name="agree-privacy"
+                    value="agree-privacy"
                     class="form-checkbox-input"
                   />
 
@@ -171,11 +200,12 @@
                   </div>
                 </label>
 
-                <a
-                  href="#"
+                <button
+                  type="submit"
                   class="custom-btn custom-btn--light custom-btn--lg w-full mt-6"
-                  >Submit</a
                 >
+                  Submit
+                </button>
               </form>
             </div>
           </div>
@@ -184,12 +214,18 @@
       <!-- Contact Area -->
 
       <!-- Not Ready Commit -->
-      <section class="pb-[184px]">
+      <section class="pb-20 md:pb-[184px]">
         <div class="wrapper">
-          <div class="bg-custom-blue-dark rounded-lg py-[112px] px-[91px]">
-            <div class="flex items-start justify-between">
+          <div
+            class="bg-custom-blue-dark rounded-lg py-10 px-6 md:py-20 md:px-14 xl:py-[112px] xl:px-[91px]"
+          >
+            <div
+              class="flex flex-col xl:flex-row xl:items-start xl:justify-between gap-10"
+            >
               <div class="w-full max-w-[550px]">
-                <h2 class="text-font-48 font-roboto text-custom-white">
+                <h2
+                  class="text-font-36 md:text-font-40 xl:text-font-48 font-roboto text-custom-white"
+                >
                   Not ready to commit?
                 </h2>
 
@@ -203,7 +239,7 @@
               </div>
 
               <img
-                class="w-[257px] h-[257px] object-contain"
+                class="w-fit h-[180px] md:h-[220px] lg:h-[257px] object-contain mx-auto xl:mx-0"
                 src="images/commit.png"
                 alt="commit"
               />

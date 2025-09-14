@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Jabacus | Signup page</title>
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Custom CSS File -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <main>
+      <!-- Signup Area -->
+      <section class="flex items-center justify-center h-screen relative">
+        <a
+          href="#"
+          class="w-fit h-[61px] absolute top-8 left-1/2 -translate-x-1/2"
+        >
+          <img src="images/logo-dark.png" alt="logo" />
+        </a>
+
+        <div class="wrapper">
+          <div class="w-full max-w-[410px] ml-[111px]">
+            <form action="">
+              <h2 class="text-font-36 mb-8">Sign Up</h2>
+
+              <div class="space-y-4">
+                <div class="flex flex-col md:flex-row gap-4">
+                  <label class="label-block flex-1">
+                    <span class="label-style">First Name</span>
+                    <input
+                      type="text"
+                      name="fname"
+                      id="fname"
+                      class="input-style"
+                    />
+                  </label>
+
+                  <label class="label-block flex-1">
+                    <span class="label-style">Last Name</span>
+                    <input
+                      type="text"
+                      name="lname"
+                      id="lname"
+                      class="input-style"
+                    />
+                  </label>
+                </div>
+
+                <label class="label-block">
+                  <span class="label-style">Email Address</span>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="input-style"
+                  />
+                </label>
+
+                <label class="label-block">
+                  <span class="label-style">Password</span>
+
+                  <div class="relative">
+                    <input
+                      type="password"
+                      name="password"
+                      id="password"
+                      class="input-style password-input"
+                    />
+
+                    <button
+                      type="button"
+                      class="toggle-eye-btn w-fit h-3.5 absolute top-1/2 -translate-y-1/2 right-4"
+                    >
+                      <img src="images/visibility.svg" alt="visibility" />
+                    </button>
+                  </div>
+                </label>
+              </div>
+
+              <label class="flex items-center mt-2">
+                <input
+                  type="checkbox"
+                  name="agree-privacy"
+                  value="agree-privacy"
+                  class="form-checkbox-input"
+                />
+
+                <div class="form-checkbox-content items-start">
+                  <div class="form-checkbox-icon mt-1">
+                    <img
+                      class="form-checkbox-tick"
+                      src="images/tick.png"
+                      alt="tick"
+                    />
+                  </div>
+
+                  <span class="form-checkbox-label flex-1"
+                    >I have read and accepted the
+                    <a
+                      href="#"
+                      class="underline font-dmMono font-normal text-font-12"
+                      >Terms and Conditions</a
+                    >
+                    and
+                    <a
+                      href="#"
+                      class="underline font-dmMono font-normal text-font-12"
+                      >Privacy Policy</a
+                    >.</span
+                  >
+                </div>
+              </label>
+
+              <button
+                type="submit"
+                class="custom-btn custom-btn--light custom-btn--lg w-full mt-6"
+              >
+                Sign Up
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- Signup Area -->
+    </main>
+
+    <!-- JS CDN Link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
