@@ -25,18 +25,26 @@
   <body>
     <main>
       <!-- Signup Area -->
-      <section class="flex items-center justify-center h-screen relative">
+      <section
+        class="flex items-center justify-center min-h-screen 2xl:min-h-auto 2xl:h-screen relative overflow-hidden pt-36 pb-20 md:pt-44 md:pb-38 2xl:py-0"
+      >
+        <img
+          class="w-[1078px] h-[1404px] absolute -bottom-[170px] left-1/2 -translate-x-1/2 rotate-[30deg] z-10"
+          src="images/gradient-md.png"
+          alt="gradient"
+        />
+
         <a
           href="#"
-          class="w-fit h-[61px] absolute top-8 left-1/2 -translate-x-1/2"
+          class="w-fit h-13 md:h-[61px] absolute top-8 left-1/2 -translate-x-1/2 z-20"
         >
           <img src="images/logo-dark.png" alt="logo" />
         </a>
 
-        <div class="wrapper">
-          <div class="w-full max-w-[410px] ml-[111px]">
+        <div class="wrapper relative z-20">
+          <div class="w-full max-w-[410px] 2xl:ml-[111px] mx-auto 2xl:mx-0">
             <form action="">
-              <h2 class="text-font-36 mb-8">Sign Up</h2>
+              <h2 class="text-font-30 md:text-font-36 mb-8">Sign Up</h2>
 
               <div class="space-y-4">
                 <div class="flex flex-col md:flex-row gap-4">
@@ -92,7 +100,7 @@
                 </label>
               </div>
 
-              <label class="flex items-center mt-2">
+              <label class="flex items-center mt-2 pr-5">
                 <input
                   type="checkbox"
                   name="agree-privacy"
@@ -132,8 +140,415 @@
               >
                 Sign Up
               </button>
+
+              <div class="flex items-center gap-2 my-4">
+                <span class="block flex-1 border border-custom-gray-mid"></span>
+                <p class="text-font-14">or</p>
+                <span class="block flex-1 border border-custom-gray-mid"></span>
+              </div>
+
+              <button
+                type="button"
+                class="custom-btn custom-btn--outline custom-btn--outline-white custom-btn--lg w-full gap-3 normal-case font-roboto text-font-16"
+              >
+                <img class="w-fit h-5" src="images/google.svg" alt="google" />
+                Continue with Google
+              </button>
+
+              <p class="text-font-14 mt-8">
+                Already have an account?
+                <a
+                  href="#"
+                  class="font-dmMono font-medium text-custom-blue-light hover:underline"
+                  >Log In</a
+                >
+              </p>
             </form>
           </div>
+        </div>
+
+        <div
+          class="absolute -top-12 right-[37px] w-full max-w-[560px] z-20 simple 2xl:h-screen hidden 2xl:block"
+        >
+          <!-- Testimonial Area -->
+          <div class="space-y-6">
+            <div class="flex gap-6">
+              <!-- Single Testimonial -->
+              <div
+                class="bg-custom-white p-4 rounded-lg border border-custom-gray-light flex flex-col justify-between gap-4 flex-1"
+              >
+                <p class="text-font-16">
+                  "The precision and ease of use are unmatched!"
+                </p>
+
+                <div class="flex items-center gap-4">
+                  <img
+                    class="w-10 h-10 rounded-full object-cover border border-custom-gray-light"
+                    src="images/johnson.png"
+                    alt="avatar"
+                  />
+
+                  <div class="">
+                    <h2
+                      class="text-font-16 leading-tight text-custom-gray-dark"
+                    >
+                      Aaron Johnson
+                    </h2>
+
+                    <p class="text-font-10 text-custom-gray-dark">
+                      Senior Engineer, ABC Corp
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Single Testimonial -->
+
+              <!-- Single Testimonial -->
+              <div
+                class="bg-custom-white p-4 rounded-lg border border-custom-gray-light flex flex-col justify-between gap-4 w-full max-w-[202px]"
+              >
+                <p class="text-font-16">
+                  "The precision and ease of use are unmatched!"
+                </p>
+
+                <div class="flex items-center gap-4">
+                  <img
+                    class="w-10 h-10 rounded-full object-cover"
+                    src="images/avatar.png"
+                    alt="avatar"
+                  />
+
+                  <div class="">
+                    <h2
+                      class="text-font-16 leading-tight text-custom-gray-dark"
+                    >
+                      Aaron Johnson
+                    </h2>
+
+                    <p class="text-font-10 text-custom-gray-dark">
+                      Senior Engineer, ABC Corp
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Single Testimonial -->
+            </div>
+
+            <div class="flex gap-6">
+              <!-- Single Testimonial -->
+              <div
+                class="bg-custom-white p-4 rounded-lg border border-custom-gray-light flex flex-col justify-between gap-4 w-full max-w-[223px]"
+              >
+                <p class="text-font-16">
+                  "jabacus met our needs and went above and beyond with their
+                  innovative tools"
+                </p>
+
+                <div class="flex flex-col gap-4 max-w-[96px]">
+                  <img
+                    class="w-10 h-10 rounded-full object-cover border border-custom-gray-light"
+                    src="images/aaron.png"
+                    alt="avatar"
+                  />
+
+                  <div class="">
+                    <h2
+                      class="text-font-16 leading-tight text-custom-gray-dark"
+                    >
+                      Aaron Johnson
+                    </h2>
+
+                    <p class="text-font-10 text-custom-gray-dark">
+                      Senior Engineer, ABC Corp
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Single Testimonial -->
+
+              <div class="flex-1 space-y-6">
+                <!-- Single Testimonial -->
+                <div
+                  class="bg-custom-white p-4 rounded-lg border border-custom-gray-light flex flex-col justify-between gap-4"
+                >
+                  <p class="text-font-16">
+                    "Without a doubt the best tool for the job."
+                  </p>
+
+                  <div class="flex items-center gap-4">
+                    <img
+                      class="w-10 h-10 rounded-full object-cover border border-custom-gray-light"
+                      src="images/sally.png"
+                      alt="avatar"
+                    />
+
+                    <div class="">
+                      <h2
+                        class="text-font-16 leading-tight text-custom-gray-dark"
+                      >
+                        Sally Jones
+                      </h2>
+
+                      <p class="text-font-10 text-custom-gray-dark">
+                        Senior Engineer, ABC Corp
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single Testimonial -->
+
+                <!-- Single Testimonial -->
+                <div
+                  class="bg-custom-white p-4 rounded-lg border border-custom-gray-light flex flex-col justify-between gap-4"
+                >
+                  <p class="text-font-16">
+                    "Without a doubt the best tool for the job."
+                  </p>
+
+                  <div class="flex items-center gap-4">
+                    <img
+                      class="w-10 h-10 rounded-full object-cover border border-custom-gray-light"
+                      src="images/sally.png"
+                      alt="avatar"
+                    />
+
+                    <div class="">
+                      <h2
+                        class="text-font-16 leading-tight text-custom-gray-dark"
+                      >
+                        Sally Jones
+                      </h2>
+
+                      <p class="text-font-10 text-custom-gray-dark">
+                        Senior Engineer, ABC Corp
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single Testimonial -->
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <!-- Single Testimonial -->
+              <div
+                class="bg-custom-white p-4 rounded-lg border border-custom-gray-light flex flex-col justify-between gap-4 flex-1"
+              >
+                <p class="text-font-16">
+                  "The precision and ease of use are unmatched!"
+                </p>
+
+                <div class="flex items-center gap-4">
+                  <img
+                    class="w-10 h-10 rounded-full object-cover border border-custom-gray-light"
+                    src="images/johnson.png"
+                    alt="avatar"
+                  />
+
+                  <div class="">
+                    <h2
+                      class="text-font-16 leading-tight text-custom-gray-dark"
+                    >
+                      Aaron Johnson
+                    </h2>
+
+                    <p class="text-font-10 text-custom-gray-dark">
+                      Senior Engineer, ABC Corp
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Single Testimonial -->
+
+              <!-- Single Testimonial -->
+              <div
+                class="bg-custom-white p-4 rounded-lg border border-custom-gray-light flex flex-col justify-between gap-4 w-full max-w-[202px]"
+              >
+                <p class="text-font-16">
+                  "The precision and ease of use are unmatched!"
+                </p>
+
+                <div class="flex items-center gap-4">
+                  <img
+                    class="w-10 h-10 rounded-full object-cover"
+                    src="images/avatar.png"
+                    alt="avatar"
+                  />
+
+                  <div class="">
+                    <h2
+                      class="text-font-16 leading-tight text-custom-gray-dark"
+                    >
+                      Aaron Johnson
+                    </h2>
+
+                    <p class="text-font-10 text-custom-gray-dark">
+                      Senior Engineer, ABC Corp
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Single Testimonial -->
+            </div>
+
+            <div class="flex gap-6">
+              <!-- Single Testimonial -->
+              <div
+                class="bg-custom-white p-4 rounded-lg border border-custom-gray-light flex flex-col justify-between gap-4 w-full max-w-[223px]"
+              >
+                <p class="text-font-16">
+                  "jabacus met our needs and went above and beyond with their
+                  innovative tools"
+                </p>
+
+                <div class="flex flex-col gap-4 max-w-[96px]">
+                  <img
+                    class="w-10 h-10 rounded-full object-cover border border-custom-gray-light"
+                    src="images/aaron.png"
+                    alt="avatar"
+                  />
+
+                  <div class="">
+                    <h2
+                      class="text-font-16 leading-tight text-custom-gray-dark"
+                    >
+                      Aaron Johnson
+                    </h2>
+
+                    <p class="text-font-10 text-custom-gray-dark">
+                      Senior Engineer, ABC Corp
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Single Testimonial -->
+
+              <div class="flex-1 space-y-6">
+                <!-- Single Testimonial -->
+                <div
+                  class="bg-custom-white p-4 rounded-lg border border-custom-gray-light flex flex-col justify-between gap-4"
+                >
+                  <p class="text-font-16">
+                    "Without a doubt the best tool for the job."
+                  </p>
+
+                  <div class="flex items-center gap-4">
+                    <img
+                      class="w-10 h-10 rounded-full object-cover border border-custom-gray-light"
+                      src="images/sally.png"
+                      alt="avatar"
+                    />
+
+                    <div class="">
+                      <h2
+                        class="text-font-16 leading-tight text-custom-gray-dark"
+                      >
+                        Sally Jones
+                      </h2>
+
+                      <p class="text-font-10 text-custom-gray-dark">
+                        Senior Engineer, ABC Corp
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single Testimonial -->
+
+                <!-- Single Testimonial -->
+                <div
+                  class="bg-custom-white p-4 rounded-lg border border-custom-gray-light flex flex-col justify-between gap-4"
+                >
+                  <p class="text-font-16">
+                    "Without a doubt the best tool for the job."
+                  </p>
+
+                  <div class="flex items-center gap-4">
+                    <img
+                      class="w-10 h-10 rounded-full object-cover border border-custom-gray-light"
+                      src="images/sally.png"
+                      alt="avatar"
+                    />
+
+                    <div class="">
+                      <h2
+                        class="text-font-16 leading-tight text-custom-gray-dark"
+                      >
+                        Sally Jones
+                      </h2>
+
+                      <p class="text-font-10 text-custom-gray-dark">
+                        Senior Engineer, ABC Corp
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single Testimonial -->
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <!-- Single Testimonial -->
+              <div
+                class="bg-custom-white p-4 rounded-lg border border-custom-gray-light flex flex-col justify-between gap-4 flex-1"
+              >
+                <p class="text-font-16">
+                  "The precision and ease of use are unmatched!"
+                </p>
+
+                <div class="flex items-center gap-4">
+                  <img
+                    class="w-10 h-10 rounded-full object-cover border border-custom-gray-light"
+                    src="images/johnson.png"
+                    alt="avatar"
+                  />
+
+                  <div class="">
+                    <h2
+                      class="text-font-16 leading-tight text-custom-gray-dark"
+                    >
+                      Aaron Johnson
+                    </h2>
+
+                    <p class="text-font-10 text-custom-gray-dark">
+                      Senior Engineer, ABC Corp
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Single Testimonial -->
+
+              <!-- Single Testimonial -->
+              <div
+                class="bg-custom-white p-4 rounded-lg border border-custom-gray-light flex flex-col justify-between gap-4 w-full max-w-[202px]"
+              >
+                <p class="text-font-16">
+                  "The precision and ease of use are unmatched!"
+                </p>
+
+                <div class="flex items-center gap-4">
+                  <img
+                    class="w-10 h-10 rounded-full object-cover"
+                    src="images/avatar.png"
+                    alt="avatar"
+                  />
+
+                  <div class="">
+                    <h2
+                      class="text-font-16 leading-tight text-custom-gray-dark"
+                    >
+                      Aaron Johnson
+                    </h2>
+
+                    <p class="text-font-10 text-custom-gray-dark">
+                      Senior Engineer, ABC Corp
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Single Testimonial -->
+            </div>
+          </div>
+          <!-- Testimonial Area -->
         </div>
       </section>
       <!-- Signup Area -->
