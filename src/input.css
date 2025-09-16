@@ -65,6 +65,7 @@
   --color-custom-gray-dark: #2c2c2c;
   --color-custom-gray-light: #e3e3e3;
   --color-custom-gray-mid: #c2c2c2;
+  --color-custom-red: #ec221f;
 
   --text-font-10: 10px;
   --text-font-10--line-height: 1.5;
@@ -170,6 +171,10 @@
 
   .custom-btn--md {
     @apply px-3 h-10;
+  }
+
+  .custom-btn--sm {
+    @apply px-2 py-0.5 h-[29px] text-font-14 font-dmMono font-medium;
   }
 
   .nav__link {
@@ -420,6 +425,19 @@
 }
 
 .header--show .custom-btn--nav:hover svg path {
+  fill: #f9f9f9 tr;
+}
+
+.custom-btn--icon svg path {
+  fill: #142444;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+
+.custom-btn--icon:hover svg path {
   fill: #f9f9f9;
 }
 
