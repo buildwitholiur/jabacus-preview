@@ -60,6 +60,7 @@
   --color-custom-white: #f9f9f9;
   --color-custom-blue-dark: #142444;
   --color-custom-blue-light: #0c94d4;
+  --color-custom-blue-400: #b3dbef;
   --color-custom-gray: #9c9990;
   --color-custom-gray-400: #808080;
   --color-custom-gray-dark: #2c2c2c;
@@ -165,6 +166,14 @@
     @apply text-custom-blue-dark hover:text-custom-white;
   }
 
+  .custom-btn--blue {
+    @apply bg-custom-blue-light border-custom-blue-light h-9 py-1 px-6 hover:bg-custom-blue-light/35 hover:text-custom-blue-dark;
+  }
+
+  .custom-btn--black {
+    @apply bg-custom-blue-dark border-custom-blue-dark h-9 py-1 px-6 hover:bg-transparent hover:text-custom-blue-dark;
+  }
+
   .custom-btn--lg {
     @apply px-3 h-10.5 text-font-18;
   }
@@ -244,6 +253,22 @@
 
   .form-checkbox-tick {
     @apply w-2.5 h-auto object-contain hidden;
+  }
+
+  .form-radio-input {
+    @apply hidden;
+  }
+
+  .form-radio-content {
+    @apply flex items-center gap-2.5 cursor-pointer;
+  }
+
+  .form-radio-icon {
+    @apply w-5 h-5 md:w-6 md:h-6 border border-custom-blue-dark flex items-center justify-center rounded-full p-[3px];
+  }
+
+  .form-radio-icon-circle {
+    @apply w-full h-full bg-custom-blue-light rounded-full hidden;
   }
 
   .trusted-bg {
@@ -335,6 +360,13 @@
     @apply block;
   }
 
+  .form-radio-input:checked
+    + .form-radio-content
+    .form-radio-icon
+    .form-radio-icon-circle {
+    @apply block;
+  }
+
   .navbar__toggler.change .bar1 {
     @apply mb-0;
     transform: rotate(-40deg) translate(-3px, 3px);
@@ -355,6 +387,54 @@
     -moz-transform: rotate(40deg) translate(-1px, -1px);
     -ms-transform: rotate(40deg) translate(-1px, -1px);
     -o-transform: rotate(40deg) translate(-1px, -1px);
+  }
+
+  .custom-row {
+    @apply flex border-b border-custom-gray-light;
+  }
+
+  .custom-cell {
+    @apply flex-1 w-full p-4 border-r border-custom-gray-light last-of-type:border-r-0 first-of-type:pl-0 flex items-center justify-center;
+  }
+
+  .custom-cell--header {
+    @apply border-r-0 p-0;
+  }
+
+  .custom-row--header {
+    @apply border-b-0;
+  }
+
+  .custom-cell--intro {
+    @apply w-full min-w-[316px] flex-1;
+  }
+
+  .custom-cell--left {
+    @apply flex items-center justify-start;
+  }
+
+  .custom-cell--center {
+    @apply flex items-center justify-center;
+  }
+
+  .accordion__item {
+    @apply border-b border-custom-gray-light py-6 first-of-type:border-t;
+  }
+
+  .accordion__button {
+    @apply flex items-center justify-between gap-5 w-full text-left;
+  }
+
+  .accordion__icon {
+    @apply w-10 h-10 md:w-12 md:h-12 border border-custom-blue-light rounded-full flex items-center justify-center;
+  }
+
+  .accordion__icon-main {
+    @apply w-5 h-5 md:w-6 md:h-6;
+  }
+
+  .accordion__content {
+    @apply overflow-hidden max-h-0 transition-all duration-300 ease-in-out;
   }
 }
 
@@ -441,17 +521,20 @@
   fill: #f9f9f9;
 }
 
-/* Custom CSS */
-
-/* Responsive Code */
-@media (min-width: 1024.98px) {
-  .header--show .custom-btn--nav svg path {
-    fill: #f9f9f9;
-  }
+/* Accordion */
+.accordion__icon-minus {
+  display: none;
 }
-/* Responsive Code */
 
-.simple {
+.accordion__button--active .accordion__icon-plus {
+  display: none;
+}
+
+.accordion__button--active .accordion__icon-minus {
+  display: block;
+}
+
+.testimonial-image-mask {
   -webkit-mask-image: linear-gradient(
     to bottom,
     transparent,
@@ -467,3 +550,13 @@
     transparent
   );
 }
+
+/* Custom CSS */
+
+/* Responsive Code */
+@media (min-width: 1024.98px) {
+  .header--show .custom-btn--nav svg path {
+    fill: #f9f9f9;
+  }
+}
+/* Responsive Code */
