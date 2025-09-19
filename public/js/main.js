@@ -95,9 +95,9 @@ document.addEventListener("DOMContentLoaded", function () {
         toggleActions: "play none none reverse",
         markers: false,
       },
-      duration: 1.3,
+      duration: 1.3, // Animation speed (increase for slower, decrease for faster)
       autoAlpha: 0,
-      stagger: 0.25,
+      stagger: 0.25, // Delay between each item’s animation
     });
   }
 
@@ -112,9 +112,9 @@ document.addEventListener("DOMContentLoaded", function () {
         toggleActions: "play none none reverse",
         markers: false,
       },
-      duration: 1.4,
+      duration: 1.4, // Animation speed (increase for slower, decrease for faster)
       autoAlpha: 0,
-      stagger: 0.4,
+      stagger: 0.4, // Delay between each item’s animation
     });
   }
 
@@ -129,9 +129,9 @@ document.addEventListener("DOMContentLoaded", function () {
         toggleActions: "play none none reverse",
         markers: false,
       },
-      duration: 1.6,
+      duration: 1.6, // Animation speed (increase for slower, decrease for faster)
       autoAlpha: 0,
-      stagger: 0.4,
+      stagger: 0.4, // Delay between each item’s animation
     });
   }
 
@@ -146,9 +146,9 @@ document.addEventListener("DOMContentLoaded", function () {
         toggleActions: "play none none reverse",
         markers: false,
       },
-      duration: 1.2,
+      duration: 1.2, // Animation speed (increase for slower, decrease for faster)
       autoAlpha: 0,
-      stagger: 0.3,
+      stagger: 0.3, // Delay between each item’s animation
     });
   }
 
@@ -163,9 +163,26 @@ document.addEventListener("DOMContentLoaded", function () {
         toggleActions: "play none none reverse",
         markers: false,
       },
-      duration: 1.6,
+      duration: 1.6, // Animation speed (increase for slower, decrease for faster)
       autoAlpha: 0,
-      stagger: 0.4,
+      stagger: 0.4, // Delay between each item’s animation
+    });
+  }
+
+  if (document.querySelector(".color-cells")) {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(".color-cell", {
+      scrollTrigger: {
+        trigger: ".color-cells",
+        start: "150 80%",
+        end: "bottom top",
+        toggleActions: "play none none reverse",
+        markers: false,
+      },
+      duration: 1.2, // Animation speed (increase for slower, decrease for faster)
+      autoAlpha: 0,
+      stagger: 0.25, // Delay between each item’s animation
     });
   }
 
@@ -206,13 +223,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (testimonialTrack && testimonialWrapper) {
     const testimonialClone = testimonialTrack.cloneNode(true);
-    testimonialClone.style.marginTop = "24px"; // 6rem if you want more
+    testimonialClone.style.marginTop = "24px";
     testimonialTrack.parentNode.appendChild(testimonialClone);
 
     const testimonialScrollAnim = gsap.to(".testimonial-track", {
       yPercent: -100,
       ease: "none",
-      duration: 20,
+      duration: 20, // Animation speed (increase for slower, decrease for faster)
       repeat: -1,
     });
 

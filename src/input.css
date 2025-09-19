@@ -436,6 +436,22 @@
   .accordion__content {
     @apply overflow-hidden max-h-0 transition-all duration-300 ease-in-out;
   }
+
+  .layer-row {
+    @apply flex border-b border-custom-gray-light first-of-type:border-t h-8;
+  }
+
+  .layer-col {
+    @apply flex-1 border-r border-custom-gray-light last-of-type:border-r-0;
+  }
+
+  .color-cell--dark {
+    @apply bg-custom-blue-dark;
+  }
+
+  .color-cell--light {
+    @apply bg-custom-blue-light;
+  }
 }
 
 /* Custom CSS */
