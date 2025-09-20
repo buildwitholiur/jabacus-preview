@@ -83,7 +83,9 @@ document.addEventListener("DOMContentLoaded", function () {
     initAccordion(".custom__accodion--faq");
   }
 
-  // GSAP Scroll Animation
+  // GSAP Scroll Animation Start
+
+  // Spreadsheets Code Animation | Home
   if (document.querySelector(".spreadsheets-code__items")) {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -101,6 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Why Structural Engineers Animation | Home
   if (document.querySelector(".why-structural__items")) {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -118,6 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Critical Calculations Animation | Home
   if (document.querySelector(".critical__items")) {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -135,6 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Saving Hours Animation | Home
   if (document.querySelector(".saving-hours__items")) {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -152,23 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  if (document.querySelector(".features__items")) {
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.from(".features__item", {
-      scrollTrigger: {
-        trigger: ".features__items",
-        start: "150 80%",
-        end: "bottom top",
-        toggleActions: "play none none reverse",
-        markers: false,
-      },
-      duration: 1.6, // Animation speed (increase for slower, decrease for faster)
-      autoAlpha: 0,
-      stagger: 0.4, // Delay between each item’s animation
-    });
-  }
-
+  // Jabacus Saves Animation | Home
   if (document.querySelector(".color-cells")) {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -186,7 +175,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // illustrations Movement Effect
+  // Pricing Area Animation | Pricing
+  if (document.querySelector(".features__items")) {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(".features__item", {
+      scrollTrigger: {
+        trigger: ".features__items",
+        start: "150 80%",
+        end: "bottom top",
+        toggleActions: "play none none reverse",
+        markers: false,
+      },
+      duration: 1.6, // Animation speed (increase for slower, decrease for faster)
+      autoAlpha: 0,
+      stagger: 0.4, // Delay between each item’s animation
+    });
+  }
+
+  // illustrations Movement Effect | Login
   const screenArea = document.querySelector(".screen-icons-area");
   if (screenArea) {
     const screenIcons = document.querySelectorAll(".screen-icon");
@@ -217,7 +224,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Vertical Sticker Animation
+  // Vertical Sticker Animation | Signup
   const testimonialTrack = document.querySelector(".testimonial-track");
   const testimonialWrapper = document.querySelector(".testimonial-wrapper");
 
